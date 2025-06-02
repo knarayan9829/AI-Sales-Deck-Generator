@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo 2.png';
 
 const CORRECT_USERNAME = "admin";
 const CORRECT_PASSWORD = "password123";
@@ -23,7 +23,7 @@ export default function Login() {
     <div className="flex h-screen">
       {/* Left Panel */}
       <div className="w-1/2 flex flex-col justify-center items-center bg-gray-900 text-white p-12">
-        <img src={logo} alt="DECGEN.AI" className="mb-8 h-20" />
+        
         <h1 className="text-4xl font-bold mb-8">Log in to your Account</h1>
         <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4">
           <input 
@@ -47,10 +47,10 @@ export default function Login() {
         </form>
       </div>
       {/* Right Panel */}
-      <div className="w-1/2 flex flex-col justify-center items-center p-12 bg-brand-gradient text-gray-200">
+      <div className="w-1/2 flex flex-col justify-center items-center p-12 bg-white text-black">
         <div className="max-w-xs text-center">
-          <h2 className="text-2xl font-semibold mb-4">Welcome to DECGEN.AI</h2>
-          <p>Securely generate AI-powered sales decks for your brand.</p>
+          <img src={logo} alt="DECGEN.AI" className="mb-10 h-15" />
+          <h2 className="text-3xl font-semibold mb-4">Securely generate AI-powered sales decks for your brand.</h2>
         </div>
       </div>
     </div>

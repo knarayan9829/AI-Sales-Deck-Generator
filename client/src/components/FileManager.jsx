@@ -9,21 +9,21 @@ export default function FileManager() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto bg-white p-8 shadow rounded-lg">
-      <h2 className="text-2xl font-semibold mb-4 text-gray-800">File Manager</h2>
+    <div className="max-w-10xl mx-auto bg-transparent p-8 shadow rounded-lg">
+      <h2 className="text-2xl font-semibold mb-4 text-white">File Manager</h2>
       <input 
         type="file" 
         multiple 
         onChange={handleUpload} 
-        className="mb-4 border-gray-300 bg-gray-50 hover:bg-gray-100 p-2 rounded-lg text-gray-700" 
+        className="mb-4 border-gray-300 bg-transparent text-white p-2 rounded-lg "
       />
       <div>
         {files.length === 0 
-          ? <p className="text-gray-500">No files uploaded yet.</p> 
+          ? <p className="text-gray-200">No files uploaded yet.</p> 
           : (
             <ul className="list-disc pl-5">
               {files.map((file, idx) => (
-                <li key={idx} className="text-gray-700">{file.name}</li>
+                <li key={idx} className="text-gray-100">{file.name}</li>
               ))}
             </ul>
           )}

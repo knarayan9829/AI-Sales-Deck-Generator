@@ -23,11 +23,11 @@ export default function CreateDeck() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto bg-white p-8 shadow rounded-lg">
-      <h2 className="text-2xl font-semibold mb-4 text-gray-800">Create Sales Deck</h2>
+    <div className="max-w-10xl mx-auto bg-gradient p-8 shadow rounded-lg">
+      <h2 className="text-2xl font-semibold mb-4 text-white">Create Sales Deck</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-gray-700 mb-1">Brand Name</label>
+          <label className="block text-white mb-1">Brand Name</label>
           <input
             type="text"
             value={brandName}
@@ -37,7 +37,7 @@ export default function CreateDeck() {
           />
         </div>
         <div>
-          <label className="block text-gray-700 mb-1">Description</label>
+          <label className="block text-white mb-1">Description</label>
           <textarea
             value={description}
             onChange={e => setDescription(e.target.value)}
@@ -47,9 +47,9 @@ export default function CreateDeck() {
           />
         </div>
         <div>
-          <label className="block text-gray-700 mb-1">Relevant Files (Select)</label>
+          <label className="block text-white mb-1">Relevant Files (Select)</label>
           <div className="max-h-40 overflow-y-auto border border-gray-200 rounded-lg p-2">
-            {files.length === 0 && <p className="text-gray-500">No files uploaded.</p>}
+            {files.length === 0 && <p className="text-white">No files uploaded.</p>}
             {files.map((file, idx) => (
               <div key={idx} className="flex items-center mb-1">
                 <input
@@ -58,7 +58,7 @@ export default function CreateDeck() {
                   checked={selectedFiles.includes(file)}
                   onChange={() => toggleFile(file)}
                 />
-                <span className="text-gray-700">{file.name}</span>
+                <span className="text-white">{file.name}</span>
               </div>
             ))}
           </div>

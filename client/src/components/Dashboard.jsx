@@ -7,7 +7,7 @@ import DeckHistory from './DeckHistory.jsx';
 
 export default function Dashboard() {
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-gray-900">
       <Sidebar />
       <main className="flex-1 p-8 overflow-auto">
         <Routes>
