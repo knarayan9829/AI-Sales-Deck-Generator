@@ -13,7 +13,6 @@ export default function CreateDeck() {
   const [secondaryColor, setSecondaryColor] = useState("#ffffff");
   const [logoFileId, setLogoFileId] = useState("");
 
-  const [selectedPlotFileIds, setSelectedPlotFileIds] = useState([]);
   const [selectedVideoFileIds, setSelectedVideoFileIds] = useState([]);
   const [selectedDocFileIds, setSelectedDocFileIds] = useState([]);
 
@@ -22,13 +21,11 @@ export default function CreateDeck() {
 
   // ─── Helpers: filter files by type ────────────────────────────────────────────
   const imageFiles = files.filter((f) => f.mimeType.startsWith("image/"));
-  const csvFiles = files.filter((f) => f.name.toLowerCase().endsWith(".csv"));
   const videoFiles = files.filter((f) => f.mimeType.startsWith("video/"));
   const otherFiles = files.filter(
     (f) =>
       !f.mimeType.startsWith("image/") &&
-      !f.mimeType.startsWith("video/") &&
-      !f.name.toLowerCase().endsWith(".csv")
+      !f.mimeType.startsWith("video/")
   );
 
   // Toggle an ID in a multi-select array
@@ -59,7 +56,6 @@ export default function CreateDeck() {
       primaryColor,
       secondaryColor,
       logoFileId,
-      relevantFileIds: selectedPlotFileIds,
       videoFileIds: selectedVideoFileIds,
       documentFileIds: selectedDocFileIds,
     };
@@ -67,7 +63,7 @@ export default function CreateDeck() {
     try {
       const deck = await createDeck(payload);
       setSuccessMsg("Sales deck created successfully!");
-      // Optionally, redirect to deck.deckUrl:
+      // Optional redirect:
       // window.location.href = deck.deckUrl;
     } catch (err) {
       // `error` from context will already be set
@@ -77,7 +73,7 @@ export default function CreateDeck() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto bg-gradient-to-br from-gray-800 to-gray-900 p-8 shadow-lg rounded-lg">
+    <div className="max-w-4xl mx-auto bg-transparent p-8 shadow-lg rounded-lg">
       <h2 className="text-3xl font-semibold mb-6 text-white">
         Create Sales Deck
       </h2>
@@ -123,7 +119,7 @@ export default function CreateDeck() {
               type="color"
               value={primaryColor}
               onChange={(e) => setPrimaryColor(e.target.value)}
-              className="w-16 h-16 border-0"
+              className="w-8 h-8 border-0 rounded"
             />
           </div>
           <div>
@@ -132,7 +128,7 @@ export default function CreateDeck() {
               type="color"
               value={secondaryColor}
               onChange={(e) => setSecondaryColor(e.target.value)}
-              className="w-16 h-16 border-0"
+              className="w-8 h-8 border-0 rounded"
             />
           </div>
         </div>
@@ -155,54 +151,15 @@ export default function CreateDeck() {
           </select>
         </div>
 
-        {/* ─── Relevant Files for Plots (CSV only) ───────────────────────────── */}
-        <div>
-          <label className="block font-medium mb-1">
-            Relevant Files (CSV for plots)
-          </label>
-          <ul className="max-h-40 overflow-y-auto border border-gray-200 bg-gray-700 rounded-lg p-2">
-            {csvFiles.length === 0 && (
-              <li className="text-gray-400 italic">
-                No CSV files available.
-              </li>
-            )}
-            {csvFiles.map((f) => (
-              <li
-                key={f._id}
-                className="flex items-center mb-1 text-gray-100"
-              >
-                <input
-                  type="checkbox"
-                  className="mr-2"
-                  checked={selectedPlotFileIds.includes(f._id)}
-                  onChange={() =>
-                    toggleSelection(
-                      f._id,
-                      setSelectedPlotFileIds,
-                      selectedPlotFileIds
-                    )
-                  }
-                />
-                <label>{f.name}</label>
-              </li>
-            ))}
-          </ul>
-        </div>
-
         {/* ─── Brand Videos (video/* only) ────────────────────────────────────── */}
         <div>
           <label className="block font-medium mb-1">Brand Videos</label>
           <ul className="max-h-40 overflow-y-auto border border-gray-200 bg-gray-700 rounded-lg p-2">
             {videoFiles.length === 0 && (
-              <li className="text-gray-400 italic">
-                No video files available.
-              </li>
+              <li className="text-gray-400 italic">No video files available.</li>
             )}
             {videoFiles.map((f) => (
-              <li
-                key={f._id}
-                className="flex items-center mb-1 text-gray-100"
-              >
+              <li key={f._id} className="flex items-center mb-1 text-gray-100">
                 <input
                   type="checkbox"
                   className="mr-2"
@@ -226,15 +183,10 @@ export default function CreateDeck() {
           <label className="block font-medium mb-1">Brand Documents</label>
           <ul className="max-h-40 overflow-y-auto border border-gray-200 bg-gray-700 rounded-lg p-2">
             {otherFiles.length === 0 && (
-              <li className="text-gray-400 italic">
-                No other files available.
-              </li>
+              <li className="text-gray-400 italic">No document files available.</li>
             )}
             {otherFiles.map((f) => (
-              <li
-                key={f._id}
-                className="flex items-center mb-1 text-gray-100"
-              >
+              <li key={f._id} className="flex items-center mb-1 text-gray-100">
                 <input
                   type="checkbox"
                   className="mr-2"

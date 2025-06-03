@@ -10,7 +10,7 @@ export default function DeckHistory() {
   const backendRoot = import.meta.env.VITE_API_URL.replace("/api", "");
 
   return (
-    <div className="max-w-4xl mx-auto bg-transparent p-8 shadow rounded-lg">
+    <div className="max-w-10xl mx-auto bg-transparent p-8 shadow rounded-lg">
       <h2 className="text-2xl font-semibold mb-4 text-gray-100">
         Sales Deck History
       </h2>
@@ -37,7 +37,7 @@ export default function DeckHistory() {
                 href={`${backendRoot}${deck.deckUrl}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-400 hover:underline"
+                className="text-white hover:underline"
               >
                 View Deck
               </a>
