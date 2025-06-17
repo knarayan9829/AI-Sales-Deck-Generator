@@ -98,6 +98,12 @@ Create `server/.env` for OpenAI integration:
 OPENAI_API_KEY=your_openai_api_key_here
 MONGODB_URI=mongodb://localhost:27017/salesdeck
 ```
+### Frontend Configuration
+Create `client/.env` for Vite Integration:
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+VITE_API_URL=your_local_host_url_here
+```
 
 ## 📁 Project Structure
 
