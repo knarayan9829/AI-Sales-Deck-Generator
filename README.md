@@ -105,7 +105,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 VITE_API_URL=your_local_host_url_here
 ```
 ### For Assignment Evaluators
- An RTF file was attached with our iLearn Report Submission
+ An RTF file was attached with our iLearn Report Submission with all the .env variable values for all 4 .env files
 ``` env
 Please create the .env files with the values and the project should be good to run, thank you!
 ```
