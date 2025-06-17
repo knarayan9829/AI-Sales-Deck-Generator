@@ -1,0 +1,16 @@
+flask>=2.3.3
+flask-cors>=4.0.0
+torch>=2.0.0
+transformers>=4.35.0
+accelerate>=0.21.0
+sentencepiece>=0.1.99
+protobuf>=3.20.0
+numpy>=1.24.0
+requests>=2.31.0
+huggingface-hub>=0.17.0
+tokenizers>=0.14.0
+safetensors>=0.3.0
+
+# Optional: for better performance
+# bitsandbytes>=0.41.0  # For 8-bit quantization
+# optimum>=1.14.0       # For ONNX optimization 

@@ -1,0 +1,604 @@
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Sales Deck – Coco cola</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+        <style>
+          body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+          }
+          .container {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 100vh;
+          }
+          .main-content {
+            flex: 3;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            overflow-y: auto;
+          }
+          .sidebar {
+            background: #ff0000;
+            color: #ffffff;
+            flex: 1;
+            min-width: 280px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-sizing: border-box;
+          }
+          @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .main-content, .sidebar { flex: none; }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="main-content">
+            
+      <section style="margin-bottom: 2rem;">
+        <h2 style="color: #ff0000; border-bottom: 2px solid #ccc; padding-bottom: 0.5rem;">Brand Overview</h2>
+        <p>**Long Description:**
+
+Coca-Cola, often affectionately known as "Coke," stands as one of the world’s most enduring and beloved brands. Originating in 1886 with Dr. John Stith Pemberton’s inventive cola recipe, Coca-Cola has grown from a humble soda fountain beverage into a global powerhouse, now headquartered in Atlanta, Georgia. The Coca-Cola Company’s journey over nearly 140 years exemplifies a relentless commitment to quality, innovation, and brand strength, allowing it to serve over 1.7 billion beverages every day across more than 200 countries.
+
+At its core, Coca-Cola is defined by its unique, refreshing cola flavor, but the company’s portfolio extends far beyond its flagship product. Today, Coca-Cola offers a diverse range of beverages, including sparkling soft drinks, bottled water, teas, coffees, juices, dairy, sports drinks, and plant-based alternatives. This breadth is driven by ongoing product innovation, strategic acquisitions, and a deep understanding of evolving consumer tastes.
+
+Despite recent economic headwinds and global market challenges, Coca-Cola continues to demonstrate resilience. In the first quarter of 2025, the company achieved notable organic revenue and operating income growth, fueled by strong regional performances and successful product launches such as Simply Pop and fairlife. Strategic marketing, especially in emerging markets, and operational efficiencies have further bolstered Coca-Cola’s position as a leader in the nonalcoholic ready-to-drink (NARTD) sector.
+
+Beyond financial performance, Coca-Cola is dedicated to sustainability and social responsibility. The company invests in water stewardship, packaging recycling, and renewable energy, while fostering community engagement through global sports partnerships. With a robust global footprint, innovative spirit, and unwavering commitment to its values, Coca-Cola is poised to deliver long-term value for consumers, partners, and stakeholders worldwide.</p>
+      </section>
+    
+        <section style="margin-bottom: 3rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <h2 style="color: #ff0000; margin: 0; font-size: 1.75rem; font-weight: 600;">Data Analytics Dashboard</h2>
+            <span style="background: #ff0000; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">
+              5 Priority Insights
+            </span>
+          </div>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+      
+          <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); position: relative;">
+            <!-- Chart Type Badge -->
+            <div style="position: absolute; top: 1rem; right: 1rem; background: #F59E0B; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+              KPI Dashboard
+            </div>
+            
+            <!-- Chart Title -->
+            <h3 style="color: #ff0000; margin: 0 0 1rem 0; font-size: 1.25rem; font-weight: 600; padding-right: 6rem;">
+              Key Performance Indicators
+            </h3>
+            
+            <!-- Chart Container -->
+            <div style="height: 400px; margin-bottom: 1rem;">
+              <canvas id="chart_0" style="max-height: 100%; max-width: 100%;"></canvas>
+            </div>
+            
+            <!-- Chart Metadata -->
+            
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                
+                
+                
+                  <span style="background: #dcfce7; color: #16a34a; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Quality: high
+                  </span>
+                
+                
+                  <span style="background: #f3f4f6; color: #374151; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Priority: 85/100
+                  </span>
+                
+              </div>
+            
+          </div>
+        
+          <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); position: relative;">
+            <!-- Chart Type Badge -->
+            <div style="position: absolute; top: 1rem; right: 1rem; background: #6366F1; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+              Comparison
+            </div>
+            
+            <!-- Chart Title -->
+            <h3 style="color: #ff0000; margin: 0 0 1rem 0; font-size: 1.25rem; font-weight: 600; padding-right: 6rem;">
+              Net Operating Revenues and Operating Income (Loss) by Segment
+            </h3>
+            
+            <!-- Chart Container -->
+            <div style="height: 400px; margin-bottom: 1rem;">
+              <canvas id="chart_1" style="max-height: 100%; max-width: 100%;"></canvas>
+            </div>
+            
+            <!-- Chart Metadata -->
+            
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                
+                  <span style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Period: Three Months Ended March 28, 2025 and March 29, 2024
+                  </span>
+                
+                
+                  <span style="background: #dcfce7; color: #16a34a; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Unit: USD millions
+                  </span>
+                
+                
+                  <span style="background: #dcfce7; color: #16a34a; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Quality: high
+                  </span>
+                
+                
+                  <span style="background: #f3f4f6; color: #374151; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Priority: 75/100
+                  </span>
+                
+              </div>
+            
+          </div>
+        
+          <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); position: relative;">
+            <!-- Chart Type Badge -->
+            <div style="position: absolute; top: 1rem; right: 1rem; background: #6366F1; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+              Comparison
+            </div>
+            
+            <!-- Chart Title -->
+            <h3 style="color: #ff0000; margin: 0 0 1rem 0; font-size: 1.25rem; font-weight: 600; padding-right: 6rem;">
+              Percent Change - Revenues and Volume by Segment
+            </h3>
+            
+            <!-- Chart Container -->
+            <div style="height: 400px; margin-bottom: 1rem;">
+              <canvas id="chart_2" style="max-height: 100%; max-width: 100%;"></canvas>
+            </div>
+            
+            <!-- Chart Metadata -->
+            
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                
+                  <span style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Period: Three Months Ended March 28, 2025
+                  </span>
+                
+                
+                  <span style="background: #dcfce7; color: #16a34a; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Unit: Percent change
+                  </span>
+                
+                
+                  <span style="background: #dcfce7; color: #16a34a; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Quality: high
+                  </span>
+                
+                
+                  <span style="background: #f3f4f6; color: #374151; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Priority: 75/100
+                  </span>
+                
+              </div>
+            
+          </div>
+        
+          <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); position: relative;">
+            <!-- Chart Type Badge -->
+            <div style="position: absolute; top: 1rem; right: 1rem; background: #6366F1; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+              Comparison
+            </div>
+            
+            <!-- Chart Title -->
+            <h3 style="color: #ff0000; margin: 0 0 1rem 0; font-size: 1.25rem; font-weight: 600; padding-right: 6rem;">
+              Reconciliation of GAAP and Non-GAAP Financial Measures (Operating Results)
+            </h3>
+            
+            <!-- Chart Container -->
+            <div style="height: 400px; margin-bottom: 1rem;">
+              <canvas id="chart_3" style="max-height: 100%; max-width: 100%;"></canvas>
+            </div>
+            
+            <!-- Chart Metadata -->
+            
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                
+                  <span style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Period: Three Months Ended March 28, 2025 and March 29, 2024
+                  </span>
+                
+                
+                  <span style="background: #dcfce7; color: #16a34a; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Unit: USD millions and percentages
+                  </span>
+                
+                
+                  <span style="background: #dcfce7; color: #16a34a; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Quality: high
+                  </span>
+                
+                
+                  <span style="background: #f3f4f6; color: #374151; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Priority: 75/100
+                  </span>
+                
+              </div>
+            
+          </div>
+        
+          <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); position: relative;">
+            <!-- Chart Type Badge -->
+            <div style="position: absolute; top: 1rem; right: 1rem; background: #6366F1; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+              Comparison
+            </div>
+            
+            <!-- Chart Title -->
+            <h3 style="color: #ff0000; margin: 0 0 1rem 0; font-size: 1.25rem; font-weight: 600; padding-right: 6rem;">
+              Reconciliation of GAAP and Non-GAAP Financial Measures (Earnings and Taxes)
+            </h3>
+            
+            <!-- Chart Container -->
+            <div style="height: 400px; margin-bottom: 1rem;">
+              <canvas id="chart_4" style="max-height: 100%; max-width: 100%;"></canvas>
+            </div>
+            
+            <!-- Chart Metadata -->
+            
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                
+                  <span style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Period: Three Months Ended March 28, 2025 and March 29, 2024
+                  </span>
+                
+                
+                  <span style="background: #dcfce7; color: #16a34a; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Unit: USD millions
+                  </span>
+                
+                
+                  <span style="background: #dcfce7; color: #16a34a; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Quality: high
+                  </span>
+                
+                
+                  <span style="background: #f3f4f6; color: #374151; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">
+                    Priority: 75/100
+                  </span>
+                
+              </div>
+            
+          </div>
+        
+          </div>
+          
+          
+            <div style="text-align: center; margin-top: 2rem;">
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem;">
+                <p style="color: #64748b; margin: 0; font-size: 0.875rem;">
+                  <strong>Additional Analytics Available:</strong> 37 more visualizations available in the React dashboard
+                </p>
+                <a href="http://localhost:3000" style="color: #ff0000; text-decoration: none; font-weight: 500; font-size: 0.875rem;">
+                  View Full Interactive Dashboard →
+                </a>
+              </div>
+            </div>
+          
+          
+          <div style="margin-top: 2rem; padding: 1rem; background: linear-gradient(to right, #f0f9ff, #e0f2fe); border-radius: 8px; border-left: 4px solid #ff0000;">
+            <p style="margin: 0; font-size: 0.875rem; color: #0369a1;">
+              <strong>Interactive Analytics:</strong> These charts are powered by Chart.js and provide interactive tooltips and data exploration. 
+              For the complete analytics experience with advanced filtering and drill-down capabilities, visit the React dashboard.
+            </p>
+          </div>
+        </section>
+      
+        <section style="margin-bottom: 2rem;">
+          <h2 style="color: #ff0000; border-bottom: 2px solid #ccc; padding-bottom: 0.5rem;">Brand Documents</h2>
+          <ul style="list-style: disc; padding-left: 1.5rem;">
+      
+            <li>
+              <a href="../uploads/1749814354420-Coca-Cola_2025_Q1_Earnings_Release_Full_Release_4.29.25_2.pdf" style="color: #ff0000; text-decoration: none;" download>
+                Coca-Cola 2025 Q1 Earnings Release_Full Release_4.29.25_2.pdf
+              </a>
+            </li>
+        
+            <li>
+              <a href="../uploads/1748933124926-coca-cola-a-short-history-125-years-booklet.pdf" style="color: #ff0000; text-decoration: none;" download>
+                coca-cola-a-short-history-125-years-booklet.pdf
+              </a>
+            </li>
+        
+          </ul>
+        </section>
+      
+        <section style="margin-bottom: 2rem;">
+          <h2 style="color: #ff0000; border-bottom: 2px solid #ccc; padding-bottom: 0.5rem;">
+            🌐 AI Processing
+          </h2>
+          <div style="background-color: #f8fff0; padding: 1rem; border-radius: 6px; border-left: 4px solid #ff0000;">
+      
+            <p style="margin: 0 0 1rem 0; font-weight: bold;">
+              ⚡ Fast Processing: 2 document(s) processed via OpenAI API
+            </p>
+            <small style="color: #666;">Optimized processing path - no sensitive documents detected</small>
+        
+          </div>
+        </section>
+      
+        <section style="margin-bottom: 3rem;">
+          <h2 style="color: #ff0000; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; font-size: 1.75rem; font-weight: 600;">Competitive Intelligence Analysis</h2>
+      
+          <div style="background: linear-gradient(135deg, #ff000015, #ff000008); padding: 2rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid #ff0000; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+            <h3 style="color: #ff0000; margin-top: 0; font-size: 1.3rem; font-weight: 600;">Coco cola Market Position</h3>
+            <p style="margin-bottom: 1.5rem; color: #374151; line-height: 1.6;"><strong>Strategic Position:</strong> Coca-Cola is the world's leading NARTD beverage company, holding the #1 or #2 position in most markets and categories. The brand is iconic, with deep historical roots and continuous consumer engagement through innovation and marketing.</p>
+        
+            <div style="margin-bottom: 1.5rem;">
+              <h4 style="color: #ff0000; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Competitive Advantages</h4>
+              <ul style="margin: 0; padding-left: 1.5rem; color: #374151;">
+                <li style="margin-bottom: 0.5rem;">Unmatched global distribution and brand recognition in over 200 countries</li><li style="margin-bottom: 0.5rem;">Diverse portfolio with 30 billion-dollar brands across all major beverage categories</li><li style="margin-bottom: 0.5rem;">Strong capabilities in marketing and occasion-based activations</li><li style="margin-bottom: 0.5rem;">Ability to gain value share in total NARTD beverages</li><li style="margin-bottom: 0.5rem;">Continuous innovation (e.g., prebiotic sodas, value-added dairy, plant-based, RTD tea)</li><li style="margin-bottom: 0.5rem;">Deep local market integration and responsiveness</li>
+              </ul>
+            </div>
+          
+            <div style="margin-bottom: 1rem;">
+              <h4 style="color: #ff0000; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Key Differentiators</h4>
+              <ul style="margin: 0; padding-left: 1.5rem; color: #374151;">
+                <li style="margin-bottom: 0.5rem;">Iconic brand equity and global cultural resonance</li><li style="margin-bottom: 0.5rem;">Breadth and depth of product portfolio</li><li style="margin-bottom: 0.5rem;">Strong relationships with bottling partners and retailers</li><li style="margin-bottom: 0.5rem;">Consistent value share gains in key NARTD categories</li><li style="margin-bottom: 0.5rem;">Ability to execute large-scale, localized marketing activations</li>
+              </ul>
+            </div>
+          </div>
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: #ff0000; font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem;">Competitive Landscape</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+        
+            <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+              <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                <h4 style="margin: 0; color: #ff0000; font-size: 1.1rem; font-weight: 600;">PepsiCo</h4>
+                <span style="background: #dc3545; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+                  DIRECT
+                </span>
+              </div>
+              <p style="margin: 0 0 1rem 0; font-size: 0.9rem; color: #6b7280; line-height: 1.5;">PepsiCo is Coca-Cola's primary direct competitor globally, with leading brands in carbonated soft drinks, water, juice, sports, and tea, and maintains significant market share in both developed and emerging markets.</p>
+          
+              <div style="margin-bottom: 1rem;">
+                <h5 style="font-size: 0.85rem; color: #059669; font-weight: 600; margin-bottom: 0.5rem;">Strengths</h5>
+                <ul style="font-size: 0.8rem; margin: 0; padding-left: 1rem; color: #374151;">
+                  <li style="margin-bottom: 0.25rem;">Global distribution and brand recognition</li><li style="margin-bottom: 0.25rem;">Diverse beverage and snack portfolio</li><li style="margin-bottom: 0.25rem;">Strong presence in North America and developing markets</li>
+                </ul>
+              </div>
+            
+              <div style="margin-bottom: 0.5rem;">
+                <h5 style="font-size: 0.85rem; color: #dc2626; font-weight: 600; margin-bottom: 0.5rem;">Challenges</h5>
+                <ul style="font-size: 0.8rem; margin: 0; padding-left: 1rem; color: #374151;">
+                  <li style="margin-bottom: 0.25rem;">Heavier reliance on North American market</li><li style="margin-bottom: 0.25rem;">Direct competition with Coca-Cola in core categories</li><li style="margin-bottom: 0.25rem;">Potentially less iconic brand equity in some international markets</li>
+                </ul>
+              </div>
+            </div>
+            <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+              <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                <h4 style="margin: 0; color: #ff0000; font-size: 1.1rem; font-weight: 600;">Nestlé</h4>
+                <span style="background: #6f42c1; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+                  INDIRECT
+                </span>
+              </div>
+              <p style="margin: 0 0 1rem 0; font-size: 0.9rem; color: #6b7280; line-height: 1.5;">Nestlé is a major player in bottled water (e.g., Pure Life), coffee (Nescafé), and tea, competing indirectly in NARTD categories outside of sodas.</p>
+          
+              <div style="margin-bottom: 1rem;">
+                <h5 style="font-size: 0.85rem; color: #059669; font-weight: 600; margin-bottom: 0.5rem;">Strengths</h5>
+                <ul style="font-size: 0.8rem; margin: 0; padding-left: 1rem; color: #374151;">
+                  <li style="margin-bottom: 0.25rem;">World’s largest food and beverage company</li><li style="margin-bottom: 0.25rem;">Strong global brand portfolio in water, coffee, and tea</li><li style="margin-bottom: 0.25rem;">Extensive distribution network</li>
+                </ul>
+              </div>
+            
+              <div style="margin-bottom: 0.5rem;">
+                <h5 style="font-size: 0.85rem; color: #dc2626; font-weight: 600; margin-bottom: 0.5rem;">Challenges</h5>
+                <ul style="font-size: 0.8rem; margin: 0; padding-left: 1rem; color: #374151;">
+                  <li style="margin-bottom: 0.25rem;">Less focus on carbonated soft drinks</li><li style="margin-bottom: 0.25rem;">Brand association more with foods than with NARTD beverages</li>
+                </ul>
+              </div>
+            </div>
+            <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+              <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                <h4 style="margin: 0; color: #ff0000; font-size: 1.1rem; font-weight: 600;">Keurig Dr Pepper</h4>
+                <span style="background: #dc3545; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+                  DIRECT
+                </span>
+              </div>
+              <p style="margin: 0 0 1rem 0; font-size: 0.9rem; color: #6b7280; line-height: 1.5;">Keurig Dr Pepper is a significant competitor in the U.S. NARTD market, especially in flavored sodas, tea, and coffee.</p>
+          
+              <div style="margin-bottom: 1rem;">
+                <h5 style="font-size: 0.85rem; color: #059669; font-weight: 600; margin-bottom: 0.5rem;">Strengths</h5>
+                <ul style="font-size: 0.8rem; margin: 0; padding-left: 1rem; color: #374151;">
+                  <li style="margin-bottom: 0.25rem;">Broad portfolio across sodas, tea, water, and coffee</li><li style="margin-bottom: 0.25rem;">U.S. market strength, especially in flavored sodas</li><li style="margin-bottom: 0.25rem;">Ownership of unique brands like Dr Pepper and Snapple</li>
+                </ul>
+              </div>
+            
+              <div style="margin-bottom: 0.5rem;">
+                <h5 style="font-size: 0.85rem; color: #dc2626; font-weight: 600; margin-bottom: 0.5rem;">Challenges</h5>
+                <ul style="font-size: 0.8rem; margin: 0; padding-left: 1rem; color: #374151;">
+                  <li style="margin-bottom: 0.25rem;">Primarily focused on North American market</li><li style="margin-bottom: 0.25rem;">Smaller global footprint compared to Coca-Cola</li>
+                </ul>
+              </div>
+            </div>
+            <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+              <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                <h4 style="margin: 0; color: #ff0000; font-size: 1.1rem; font-weight: 600;">Danone</h4>
+                <span style="background: #6f42c1; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+                  INDIRECT
+                </span>
+              </div>
+              <p style="margin: 0 0 1rem 0; font-size: 0.9rem; color: #6b7280; line-height: 1.5;">Danone is a leader in bottled water (e.g., Evian, Volvic) and value-added dairy/plant-based beverages, competing with Coca-Cola’s fairlife, AdeS, and water brands.</p>
+          
+              <div style="margin-bottom: 1rem;">
+                <h5 style="font-size: 0.85rem; color: #059669; font-weight: 600; margin-bottom: 0.5rem;">Strengths</h5>
+                <ul style="font-size: 0.8rem; margin: 0; padding-left: 1rem; color: #374151;">
+                  <li style="margin-bottom: 0.25rem;">Strong in dairy, plant-based beverages, and bottled water</li><li style="margin-bottom: 0.25rem;">Focus on health and wellness trends</li>
+                </ul>
+              </div>
+            
+              <div style="margin-bottom: 0.5rem;">
+                <h5 style="font-size: 0.85rem; color: #dc2626; font-weight: 600; margin-bottom: 0.5rem;">Challenges</h5>
+                <ul style="font-size: 0.8rem; margin: 0; padding-left: 1rem; color: #374151;">
+                  <li style="margin-bottom: 0.25rem;">Limited carbonated soft drink presence</li><li style="margin-bottom: 0.25rem;">Not as diversified in beverage portfolio</li>
+                </ul>
+              </div>
+            </div>
+            <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+              <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                <h4 style="margin: 0; color: #ff0000; font-size: 1.1rem; font-weight: 600;">Monster Beverage</h4>
+                <span style="background: #6f42c1; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+                  INDIRECT
+                </span>
+              </div>
+              <p style="margin: 0 0 1rem 0; font-size: 0.9rem; color: #6b7280; line-height: 1.5;">Monster dominates energy drinks, a fast-growing beverage segment, but is a Coke partner in many markets.</p>
+          
+              <div style="margin-bottom: 1rem;">
+                <h5 style="font-size: 0.85rem; color: #059669; font-weight: 600; margin-bottom: 0.5rem;">Strengths</h5>
+                <ul style="font-size: 0.8rem; margin: 0; padding-left: 1rem; color: #374151;">
+                  <li style="margin-bottom: 0.25rem;">Category leader in energy drinks</li><li style="margin-bottom: 0.25rem;">Youth-oriented marketing</li><li style="margin-bottom: 0.25rem;">Distribution partnership with Coca-Cola</li>
+                </ul>
+              </div>
+            
+              <div style="margin-bottom: 0.5rem;">
+                <h5 style="font-size: 0.85rem; color: #dc2626; font-weight: 600; margin-bottom: 0.5rem;">Challenges</h5>
+                <ul style="font-size: 0.8rem; margin: 0; padding-left: 1rem; color: #374151;">
+                  <li style="margin-bottom: 0.25rem;">Limited to energy drinks</li><li style="margin-bottom: 0.25rem;">Dependent on Coca-Cola for distribution</li>
+                </ul>
+              </div>
+            </div>
+            <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+              <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                <h4 style="margin: 0; color: #ff0000; font-size: 1.1rem; font-weight: 600;">Local and Regional Brands (e.g. Thums Up, Inca Kola, regional teas and juices)</h4>
+                <span style="background: #6f42c1; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+                  INDIRECT
+                </span>
+              </div>
+              <p style="margin: 0 0 1rem 0; font-size: 0.9rem; color: #6b7280; line-height: 1.5;">These brands compete with Coca-Cola at the local level in emerging markets, sometimes dominating specific segments or regions.</p>
+          
+              <div style="margin-bottom: 1rem;">
+                <h5 style="font-size: 0.85rem; color: #059669; font-weight: 600; margin-bottom: 0.5rem;">Strengths</h5>
+                <ul style="font-size: 0.8rem; margin: 0; padding-left: 1rem; color: #374151;">
+                  <li style="margin-bottom: 0.25rem;">Strong local brand loyalty</li><li style="margin-bottom: 0.25rem;">Ability to cater to regional tastes</li>
+                </ul>
+              </div>
+            
+              <div style="margin-bottom: 0.5rem;">
+                <h5 style="font-size: 0.85rem; color: #dc2626; font-weight: 600; margin-bottom: 0.5rem;">Challenges</h5>
+                <ul style="font-size: 0.8rem; margin: 0; padding-left: 1rem; color: #374151;">
+                  <li style="margin-bottom: 0.25rem;">Limited international reach</li><li style="margin-bottom: 0.25rem;">Smaller marketing budgets</li>
+                </ul>
+              </div>
+            </div></div></div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        
+            <div style="background: linear-gradient(135deg, #f8fafc, #f1f5f9); padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+              <h4 style="color: #ff0000; margin: 0 0 1rem 0; font-size: 1.1rem; font-weight: 600;">Market Landscape</h4>
+              <div style="margin-bottom: 0.75rem;"><span style="font-weight: 600; color: #374151;">Industry Size:</span> <span style="color: #6b7280;">Not specified in document, but implied as extremely large with billions of servings daily and presence in over 200 countries</span></div>
+              <div style="margin-bottom: 0.75rem;"><span style="font-weight: 600; color: #374151;">Growth Rate:</span> <span style="color: #6b7280;">Organic revenue growth of 5-6% projected for 2025; global NARTD beverage industry growing steadily with higher growth in developing markets</span></div>
+              <div style="margin-bottom: 0.75rem;"><span style="font-weight: 600; color: #374151;">Competition Level:</span> <span style="color: #6b7280; text-transform: capitalize;">high</span></div>
+              
+                <div style="margin-top: 1rem;">
+                  <h5 style="font-weight: 600; color: #374151; margin-bottom: 0.5rem; font-size: 0.9rem;">Key Market Trends</h5>
+                  <ul style="font-size: 0.85rem; margin: 0; padding-left: 1rem; color: #6b7280;">
+                    <li style="margin-bottom: 0.25rem;">Health and wellness driving demand for low/no-sugar and functional beverages</li><li style="margin-bottom: 0.25rem;">Rapid growth in emerging markets (India, China, Brazil)</li><li style="margin-bottom: 0.25rem;">Innovation in product formats and occasions</li>
+                  </ul>
+                </div>
+              
+            </div>
+          
+            <div style="background: linear-gradient(135deg, #eff6ff, #dbeafe); padding: 1.5rem; border-radius: 8px; border: 1px solid #bfdbfe;">
+              <h4 style="color: #ff0000; margin: 0 0 1rem 0; font-size: 1.1rem; font-weight: 600;">Strategic Recommendations</h4>
+              <ul style="font-size: 0.9rem; margin: 0; padding-left: 0; list-style: none; color: #374151;">
+                
+                  <li style="margin-bottom: 0.75rem; display: flex; align-items: start;">
+                    <span style="background: #ff0000; color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 600; margin-right: 0.75rem; flex-shrink: 0;">1</span>
+                    <span style="line-height: 1.5;">Accelerate product innovation in health-oriented and functional beverages to address shifting consumer preferences.</span>
+                  </li>
+                
+                  <li style="margin-bottom: 0.75rem; display: flex; align-items: start;">
+                    <span style="background: #ff0000; color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 600; margin-right: 0.75rem; flex-shrink: 0;">2</span>
+                    <span style="line-height: 1.5;">Continue to invest in emerging markets with tailored local strategies and partner activations to capture long-term growth.</span>
+                  </li>
+                
+                  <li style="margin-bottom: 0.75rem; display: flex; align-items: start;">
+                    <span style="background: #ff0000; color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 600; margin-right: 0.75rem; flex-shrink: 0;">3</span>
+                    <span style="line-height: 1.5;">Expand digital and data-driven marketing capabilities to deepen consumer engagement and build loyalty across channels.</span>
+                  </li>
+                
+              </ul>
+            </div>
+          </div></section>
+        <section style="margin-bottom: 2rem;">
+          <h2 style="color: #ff0000; border-bottom: 2px solid #ccc; padding-bottom: 0.5rem;">Innovation & Product Diversification</h2>
+          <p>Coca-Cola’s commitment to innovation and a diverse beverage portfolio has been central to its sustained success. Beyond its iconic soft drinks, the company has strategically expanded into value-added dairy, plant-based beverages, and prebiotic sodas, capturing new market segments and responding to evolving consumer preferences. Targeted innovation, especially in developing and emerging markets, fuels volume growth and strengthens Coca-Cola's competitive advantage. Recent campaigns in India and China highlight how localized marketing and product adaptation drive consumer engagement and market share gains. This focus on continuous innovation not only enhances brand relevance but also ensures that Coca-Cola remains at the forefront of the global beverage industry, adeptly meeting the demands of a dynamic marketplace.</p>
+        </section>
+      
+        <section style="margin-bottom: 2rem;">
+          <h2 style="color: #ff0000; border-bottom: 2px solid #ccc; padding-bottom: 0.5rem;">Sustainability & Community Impact</h2>
+          <p>Sustainability and community engagement are integral to Coca-Cola’s global strategy and long-term vision. The company actively invests in renewable energy initiatives, water replenishment projects, and sustainable sourcing practices, minimizing its environmental footprint while supporting local ecosystems. Beyond environmental stewardship, Coca-Cola remains deeply committed to uplifting communities worldwide through philanthropic programs, disaster relief, and economic empowerment initiatives. These efforts reinforce the brand’s legacy of responsible leadership and foster lasting connections with consumers and stakeholders. As regulatory landscapes evolve and social expectations rise, Coca-Cola’s focus on sustainability and positive community impact positions it as a trusted, forward-thinking industry leader.</p>
+        </section>
+      
+          </div>
+          <div class="sidebar">
+            <div style="font-size: 1rem; margin-bottom: 1rem; color: #ffbdbd;">
+              Powered by Decker.ai
+            </div>
+            <div style="
+              background-color: #ffffff;
+              padding: 40px;
+              border-radius: 8px;
+              margin-bottom: 1rem;
+            ">
+              <img
+                src="../uploads/1748933124925-Coca-Cola_logo.svg.png"
+                alt="Logo for Coco cola"
+                style="max-width: 100%; height: auto;"
+              />
+            </div>
+            <h2 style="margin: 0.5rem 0; font-size: 1.5rem; color: #ffffff;">
+              Coco cola
+            </h2>
+            <p style="font-size: 1rem; line-height: 1.4; color: #ffbdbd;">
+              Coca-Cola is a widely popular, carbonated soft drink with a cola flavor, known as "Coke". It was invented in 1886 by John Stith Pemberton and is now manufactured and distributed by the Coca-Cola Company. The company's headquarters are in Atlanta, Georgia.
+            </p>
+          </div>
+        </div>
+        
+        <script>
+          // Chart.js initialization
+          document.addEventListener('DOMContentLoaded', function() {
+            const chartData = [{"id":"chart_0","type":"metrics","data":[{"name":"Net Operating Revenues","value":11129,"unit":"$ million","trend":"down","context":"Q1 2025; declined 2% from $11,300 million in Q1 2024","category":"financial"},{"name":"Organic Revenues Growth","value":6,"unit":"%","trend":"up","context":"Q1 2025 year-over-year; non-GAAP measure","category":"financial"},{"name":"Operating Income","value":3659,"unit":"$ million","trend":"up","context":"Q1 2025; up 71% from $2,141 million in Q1 2024","category":"financial"},{"name":"Operating Margin","value":32.9,"unit":"%","trend":"up","context":"Q1 2025; compared to 18.9% in Q1 2024","category":"financial"},{"name":"Comparable Operating Margin (Non-GAAP)","value":33.8,"unit":"%","trend":"up","context":"Q1 2025; up from 32.4% in Q1 2024","category":"financial"},{"name":"EPS (Diluted Net Income Per Share)","value":0.77,"unit":"$","trend":"up","context":"Q1 2025; up 5% from $0.74 in Q1 2024","category":"financial"}],"options":{"responsive":true,"maintainAspectRatio":false,"plugins":{"title":{"display":false},"legend":{"display":false,"position":"bottom","labels":{"padding":20,"usePointStyle":true}}},"scales":{"y":{"beginAtZero":true,"grid":{"color":"#e5e7eb"}},"x":{"grid":{"color":"#e5e7eb"}}},"elements":{"point":{"radius":4,"hoverRadius":6},"line":{"tension":0.1,"fill":false}}}},{"id":"chart_1","type":"bar","data":{"labels":["Europe, Middle East & Africa","Latin America","North America","Asia Pacific","Bottling Investments","Corporate","Eliminations","Consolidated"],"datasets":[{"label":"Net Operating Revenues March 28, 2025","data":[2,1,4,1,1,26,0,11],"backgroundColor":"#EF4444","borderColor":"#EF4444","borderWidth":3,"fill":false},{"label":"Net Operating Revenues March 29, 2024","data":[2,1,4,1,1,31,0,11],"backgroundColor":"#10B981","borderColor":"#10B981","borderWidth":3,"fill":false},{"label":"% Change","data":[1,0,3,0,0,0,34,0],"backgroundColor":"#F59E0B","borderColor":"#F59E0B","borderWidth":3,"fill":false},{"label":"Operating Income (Loss) March 28, 2025","data":[1,904,1,624,119,0,0,3],"backgroundColor":"#8B5CF6","borderColor":"#8B5CF6","borderWidth":3,"fill":false},{"label":"Operating Income (Loss) March 29, 2024","data":[1,945,497,657,156,0,0,2],"backgroundColor":"#06B6D4","borderColor":"#06B6D4","borderWidth":3,"fill":false},{"label":"% Change","data":[0,0,170,0,0,67,0,71],"backgroundColor":"#84CC16","borderColor":"#84CC16","borderWidth":3,"fill":false}]},"options":{"responsive":true,"maintainAspectRatio":false,"plugins":{"title":{"display":false},"legend":{"display":true,"position":"bottom","labels":{"padding":20,"usePointStyle":true}}},"scales":{"y":{"beginAtZero":true,"grid":{"color":"#e5e7eb"}},"x":{"grid":{"color":"#e5e7eb"}}},"elements":{"point":{"radius":4,"hoverRadius":6},"line":{"tension":0.1,"fill":false}}}},{"id":"chart_2","type":"bar","data":{"labels":["Consolidated","Europe, Middle East & Africa","Latin America","North America","Asia Pacific","Bottling Investments"],"datasets":[{"label":"Concentrate Sales","data":[1,1,0,0,8,0],"backgroundColor":"#EF4444","borderColor":"#EF4444","borderWidth":3,"fill":false},{"label":"Price/Mix","data":[5,6,16,8,0,3],"backgroundColor":"#10B981","borderColor":"#10B981","borderWidth":3,"fill":false},{"label":"Currency Impact","data":[0,0,0,0,0,0],"backgroundColor":"#F59E0B","borderColor":"#F59E0B","borderWidth":3,"fill":false},{"label":"Acquisitions, Divestitures and Structural Changes, Net","data":[0,0,0,0,0,0],"backgroundColor":"#8B5CF6","borderColor":"#8B5CF6","borderWidth":3,"fill":false},{"label":"Reported Net Revenues","data":[0,1,0,3,0,0],"backgroundColor":"#06B6D4","borderColor":"#06B6D4","borderWidth":3,"fill":false},{"label":"Organic Revenues","data":[6,7,13,3,7,2],"backgroundColor":"#84CC16","borderColor":"#84CC16","borderWidth":3,"fill":false},{"label":"Unit Case Volume","data":[2,3,0,0,6,0],"backgroundColor":"#F97316","borderColor":"#F97316","borderWidth":3,"fill":false}]},"options":{"responsive":true,"maintainAspectRatio":false,"plugins":{"title":{"display":false},"legend":{"display":true,"position":"bottom","labels":{"padding":20,"usePointStyle":true}}},"scales":{"y":{"beginAtZero":true,"grid":{"color":"#e5e7eb"}},"x":{"grid":{"color":"#e5e7eb"}}},"elements":{"point":{"radius":4,"hoverRadius":6},"line":{"tension":0.1,"fill":false}}}},{"id":"chart_3","type":"bar","data":{"labels":["Reported (GAAP) March 28, 2025","Comparable (Non-GAAP) March 28, 2025","Reported (GAAP) March 29, 2024","Comparable (Non-GAAP) March 29, 2024"],"datasets":[{"label":"Net operating revenues","data":[11,11,11,11],"backgroundColor":"#EF4444","borderColor":"#EF4444","borderWidth":3,"fill":false},{"label":"Cost of goods sold","data":[4,4,4,4],"backgroundColor":"#10B981","borderColor":"#10B981","borderWidth":3,"fill":false},{"label":"Gross profit","data":[6,7,7,6],"backgroundColor":"#F59E0B","borderColor":"#F59E0B","borderWidth":3,"fill":false},{"label":"Gross margin","data":[62.6,62.6,62.5,62.3],"backgroundColor":"#8B5CF6","borderColor":"#8B5CF6","borderWidth":3,"fill":false},{"label":"Selling, general and administrative expenses","data":[3,3,3,3],"backgroundColor":"#06B6D4","borderColor":"#06B6D4","borderWidth":3,"fill":false},{"label":"Other operating charges","data":[73,0,1,0],"backgroundColor":"#84CC16","borderColor":"#84CC16","borderWidth":3,"fill":false},{"label":"Operating income","data":[3,3,2,3],"backgroundColor":"#F97316","borderColor":"#F97316","borderWidth":3,"fill":false},{"label":"Operating margin","data":[32.9,33.8,18.9,32.4],"backgroundColor":"#EC4899","borderColor":"#EC4899","borderWidth":3,"fill":false}]},"options":{"responsive":true,"maintainAspectRatio":false,"plugins":{"title":{"display":false},"legend":{"display":true,"position":"bottom","labels":{"padding":20,"usePointStyle":true}}},"scales":{"y":{"beginAtZero":true,"grid":{"color":"#e5e7eb"}},"x":{"grid":{"color":"#e5e7eb"}}},"elements":{"point":{"radius":4,"hoverRadius":6},"line":{"tension":0.1,"fill":false}}}},{"id":"chart_4","type":"bar","data":{"labels":["Reported (GAAP) March 28, 2025","Comparable (Non-GAAP) March 28, 2025","Reported (GAAP) March 29, 2024","Comparable (Non-GAAP) March 29, 2024"],"datasets":[{"label":"Interest expense","data":[387,393,382,388],"backgroundColor":"#EF4444","borderColor":"#EF4444","borderWidth":3,"fill":false},{"label":"Equity income (loss) — net","data":[351,359,354,379],"backgroundColor":"#10B981","borderColor":"#10B981","borderWidth":3,"fill":false},{"label":"Other income (loss) — net","data":[254,28,1,0],"backgroundColor":"#F59E0B","borderColor":"#F59E0B","borderWidth":3,"fill":false},{"label":"Income before income taxes","data":[4,3,3,3],"backgroundColor":"#8B5CF6","borderColor":"#8B5CF6","borderWidth":3,"fill":false},{"label":"Income taxes","data":[722,824,687,734],"backgroundColor":"#06B6D4","borderColor":"#06B6D4","borderWidth":3,"fill":false},{"label":"Effective tax rate","data":[17.8,20.8,17.7,19],"backgroundColor":"#84CC16","borderColor":"#84CC16","borderWidth":3,"fill":false},{"label":"Net income","data":[3,3,3,3],"backgroundColor":"#F97316","borderColor":"#F97316","borderWidth":3,"fill":false},{"label":"Diluted net income per share","data":[0.77,0.73,0.74,0.72],"backgroundColor":"#EC4899","borderColor":"#EC4899","borderWidth":3,"fill":false}]},"options":{"responsive":true,"maintainAspectRatio":false,"plugins":{"title":{"display":false},"legend":{"display":true,"position":"bottom","labels":{"padding":20,"usePointStyle":true}}},"scales":{"y":{"beginAtZero":true,"grid":{"color":"#e5e7eb"}},"x":{"grid":{"color":"#e5e7eb"}}},"elements":{"point":{"radius":4,"hoverRadius":6},"line":{"tension":0.1,"fill":false}}}}];
+            
+            chartData.forEach(chartConfig => {
+              const ctx = document.getElementById(chartConfig.id);
+              if (!ctx) return;
+              
+              try {
+                // Handle different chart types
+                if (chartConfig.type === 'metrics') {
+                  // Metrics are handled by HTML, skip Chart.js rendering
+                  return;
+                }
+                
+                new Chart(ctx, {
+                  type: chartConfig.type,
+                  data: chartConfig.data,
+                  options: chartConfig.options
+                });
+              } catch (error) {
+                console.error('Error rendering chart:', chartConfig.id, error);
+                ctx.parentElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3af;">Chart rendering failed</div>';
+              }
+            });
+          });
+          
+
+        </script>
+      </body>
+      </html>
+    
