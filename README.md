@@ -104,8 +104,9 @@ Create `client/.env` for Vite Integration:
 OPENAI_API_KEY=your_openai_api_key_here
 VITE_API_URL=your_local_host_url_here
 ```
-
-```For assignment evaluators only the env files are attached with our submission
+### For Assignment Evaluators
+ Env files are attached with our submission on iLearn
+``` env
 outer.env needs to be renamed to .env and placed in /AI-Sales-Deck-Generator
 client.env needs to be renamed to .env and placed in /AI-Sales-Deck-Generator/client
 aiservice.env needs to be renamed to .env and placed in /AI-Sales-Deck-Generator/ai-service
