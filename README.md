@@ -147,8 +147,7 @@ AI-Sales-Deck-Generator/
 - **Processing**: Local GPU acceleration
 
 ### Cloud Processing (Regular Documents)
-- **Primary Model**: OpenAI GPT-3.5-turbo
-- **Fallback**: GPT-4 for complex documents
+- **Primary Model**: OpenAI 4.1
 
 ## 🔒 Security Features
 
