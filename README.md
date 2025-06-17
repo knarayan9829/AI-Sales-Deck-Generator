@@ -105,12 +105,9 @@ OPENAI_API_KEY=your_openai_api_key_here
 VITE_API_URL=your_local_host_url_here
 ```
 ### For Assignment Evaluators
- Env files are attached with our submission on iLearn
+ An RTF file was attached with our iLearn Report Submission
 ``` env
-outer.env needs to be renamed to .env and placed in /AI-Sales-Deck-Generator
-client.env needs to be renamed to .env and placed in /AI-Sales-Deck-Generator/client
-aiservice.env needs to be renamed to .env and placed in /AI-Sales-Deck-Generator/ai-service
-server.env needs to be renamed to .env and placed in /AI-Sales-Deck-Generator/server
+Please create the .env files with the values and the project should be good to run, thank you!
 ```
 
 ## 📁 Project Structure
