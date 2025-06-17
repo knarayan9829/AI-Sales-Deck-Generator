@@ -96,7 +96,7 @@ AI_SERVICE_PORT=5001
 Create `server/.env` for OpenAI integration:
 ```env
 OPENAI_API_KEY=your_openai_api_key_here
-MONGODB_URI=mongodb://localhost:27017/salesdeck
+MONGODB_URI=your_mongocluster_url_here
 ```
 ### Frontend Configuration
 Create `client/.env` for Vite Integration:
